@@ -1,0 +1,9 @@
+#Compilation folders.
+.gradle
+build
+.idea
+#Some file types
+*.jar
+*.iml
+*.class
+

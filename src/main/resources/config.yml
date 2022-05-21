@@ -1,0 +1,17 @@
+#The mode in which the plugin works.
+#CONSOLE: The OP commands will only be available from the console.
+#DISABLED: The OP itself and commands will be disabled completely.
+#LIST: The OP will be available only for the people in the list "playerlist".
+mode: CONSOLE
+#If a player gets OP but is not in the playerlist, the player will be banned.
+#If a player tries to OP another player that is not in the list, both will be banned.
+#Only if this is in true and the plugin is in LIST mode.
+nolistban: false
+#This will be executed to ban the players (Put the command without /).
+bancommand: "ban %player% Don't try to grief the server"
+#The list of players that are allowed to have/give OP. Remove the "[]" and add
+#nicknames like the example below, removing the comment line (#).
+playerlist: []
+#- sohardnick1234
+#- cuteneko4321
+
