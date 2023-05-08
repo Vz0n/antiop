@@ -2,8 +2,8 @@ plugins {
     java
 }
 
-group = "com.monkeycraftservices.antiop"
-version = "1.0-SNAPSHOT"
+group = "io.github.vz0n"
+version = "1.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT")
+    implementation("org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT")
 }
 
 tasks.getByName<JavaCompile>("compileJava"){

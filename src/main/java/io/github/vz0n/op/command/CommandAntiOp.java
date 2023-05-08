@@ -1,6 +1,6 @@
-package com.monkeycraftservices.antiop.command;
+package io.github.vz0n.op.command;
 
-import com.monkeycraftservices.antiop.AntiOP;
+import io.github.vz0n.op.AntiOP;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,10 +20,10 @@ public class CommandAntiOp implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 
-        String mode = instance.getConfig().getString("mode");
-        String subcmd = args.length > 0 ? args[0] : "";
+        String subCmd = args.length > 0 ? args[0].toLowerCase() : "";
 
-        if(sender instanceof Player && mode.equalsIgnoreCase("CONSOLE")){
+        if(sender instanceof Player &&
+                instance.getConfig().getString("mode", "").equalsIgnoreCase("CONSOLE")){
             sender.sendMessage(ChatColor.RED + "This command can only be run from the console.");
             return false;
         }
@@ -33,7 +33,7 @@ public class CommandAntiOp implements CommandExecutor {
             return true;
         }
 
-        switch(subcmd){
+        switch(subCmd){
 
             case "reload": {
                 instance.reload();
@@ -44,11 +44,11 @@ public class CommandAntiOp implements CommandExecutor {
             case "list": {
                 List<String> players = instance.getConfig().getStringList("playerlist");
                 StringBuilder list = new StringBuilder();
-                if (!players.isEmpty()){
-                    for (String s : players) {
+
+                for (String s : players) {
                         list.append(ChatColor.GRAY + "- " + s + "\n");
-                    }
                 }
+
                 sender.sendMessage(ChatColor.AQUA + "List of players in the OP list:\n" + list);
                 break;
             }

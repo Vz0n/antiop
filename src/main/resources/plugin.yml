@@ -1,9 +1,9 @@
 name: 'AntiOP'
 version: '1.0'
-main: com.monkeycraftservices.antiop.AntiOP
+main: io.github.vz0n.op.AntiOP
 api-version: 1.13
 author: iVz0n_
-description: 'OP Protection/Disabler for your server.'
+description: 'OP Protection for your server.'
 prefix: 'AntiOP'
 commands:
   antiop:
