@@ -6,5 +6,6 @@ build
 *.jar
 *.iml
 *.class
-
+#Don't ignore the wrapper
+!gradle/wrapper/gradle-wrapper.jar
 
