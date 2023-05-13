@@ -69,7 +69,7 @@ public class CommandPreProcess implements Listener {
                                instance.ban(oppedName);
 
                                //Maybe there's some crazy guy that has a bunch of people
-                               //allowed to be OP, but I need to improve this.
+                               //allowed to be OP, anyway I need to improve this.
                                instance.getServer().getScheduler().
                                        runTaskAsynchronously(instance, () -> {
                                            try {

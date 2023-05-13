@@ -1,4 +1,4 @@
-# AntiOp
+# AntiOP
 
 A simple plugin that helps to protect against some types of Minecraft vanilla operator system abuse.
 
@@ -13,6 +13,9 @@ clone this repo using `git` and do the changes. To compile the jar just run `./g
 # Note from author
 
 This was originally intended to be used on a network called "MonkeyCraft" and published on SpigotMC, but how I never updated
-it again and the guy who asked me for this never told something about again, i made the repository public.
+it again and the guy who asked me for this never told something about again, I made the repository public.
+
+Also don't expect something "professional", this is just a private plugin that I made for someone in 2022 and
+personally, I don't think my code is good compared to the stuff that you can find around GitHub.
 
 *Made by Vz0n. Licensed under GPLv3*
