@@ -45,16 +45,13 @@ public class AntiOP extends JavaPlugin {
     @Override
     public void onDisable(){
         this.getLogger().log(Level.INFO, "Disabling plugin...");
-        if (optask != null){
-            optask.cancel();
-        }
     }
 
     public void reload(){
         //We want to load the config changes firstly.
         this.reloadConfig();
 
-        String mode = this.getConfig().getString("mode","console").toUpperCase();
+        String mode = this.getConfig().getString("mode","CONSOLE").toUpperCase();
 
         //Only cancel the task if we are on CONSOLE mode and it's active.
         if (mode.equals("CONSOLE")) {
@@ -68,6 +65,7 @@ public class AntiOP extends JavaPlugin {
     }
 
     private void startOpTask(){
+        //TODO: Test this method to check that doesn't happens weird errors.
         //Cancel the previous task if there's one.
         if (optask != null){
             optask.cancel();
